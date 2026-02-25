@@ -1,0 +1,21 @@
+name = "echo-health-dashboard"
+main = "src/index.ts"
+compatibility_date = "2024-12-01"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = true
+
+[vars]
+ENVIRONMENT = "production"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "echo-health-dashboard"
+database_id = "b13d2c7e-432f-4df8-ac73-c68a7c799286"
+
+[[kv_namespaces]]
+binding = "CACHE"
+id = "5d95c200ed8f469f9160ae94757381bc"
+
+[[services]]
+binding = "PHOENIX_SVC"
+service = "echo-phoenix-cloud"
